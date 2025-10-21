@@ -1,1 +1,1 @@
-yisakor-creative.netlify.app
+http://yisakor-creative.netlify.app
