@@ -837,3 +837,61 @@ footer {
         bottom: 85px;
     }
 }
+/* --- NAVIGATION SPECIFIC MEDIA QUERIES --- */
+
+/* For Tablets and smaller laptops */
+@media (max-width: 992px) {
+    .navbar {
+        padding: 15px 2%;
+    }
+    .nav-links {
+        gap: 20px;
+        font-size: 0.9em;
+    }
+}
+
+/* For Mobile Devices (The main fix) */
+@media (max-width: 768px) {
+    .navbar {
+        /* Allows the navbar to expand height-wise if links wrap */
+        height: auto; 
+        padding: 10px 0;
+        position: fixed; /* Keeps it at the top */
+    }
+
+    .nav-links {
+        /* Key Change: Allows links to wrap to a new line if they don't fit */
+        flex-wrap: wrap; 
+        justify-content: center;
+        gap: 10px 15px; /* 10px vertical spacing, 15px horizontal */
+        padding: 0 10px;
+        max-width: 100%;
+    }
+
+    .nav-links li {
+        /* Ensures each link has enough space to be clickable */
+        display: inline-block;
+    }
+
+    .nav-links a {
+        font-size: 0.75em; /* Slightly smaller text for mobile */
+        letter-spacing: 0.5px;
+        padding: 8px 5px;
+        white-space: nowrap; /* Prevents single words from breaking */
+    }
+
+    /* Adjusting Hero section so it doesn't hide under the taller mobile navbar */
+    .hero-section {
+        padding-top: 80px; 
+    }
+}
+
+/* For Extra Small Phones */
+@media (max-width: 400px) {
+    .nav-links {
+        gap: 5px 10px;
+    }
+    .nav-links a {
+        font-size: 0.7em;
+    }
+}    
