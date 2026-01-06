@@ -763,10 +763,77 @@ footer {
         padding: 20px;
     }
 
-    /* Chatbot responsive */
+    /* --- RESPONSIVE MEDIA QUERIES --- */
+
+/* 1. Large Tablets & Small Laptops (under 1024px) */
+@media (max-width: 1024px) {
+    h1 { font-size: 3em; }
+    .hero-content h1 { font-size: 3.8em; }
+    .section { padding: 80px 5%; }
+}
+
+/* 2. Tablets & Large Phones (under 768px) */
+@media (max-width: 768px) {
+    /* Navbar Adjustment */
+    .navbar {
+        padding: 10px 3%;
+        flex-direction: column;
+    }
+    .nav-links {
+        gap: 15px;
+        margin-top: 10px;
+        font-size: 0.8em;
+    }
+
+    /* Hero Section */
+    .hero-content h1 { font-size: 2.8em; }
+    .hero-content h2 { font-size: 1.4em; }
+    .profile-picture { width: 150px; height: 150px; }
+
+    /* Layout Grids */
+    .skills-grid, .projects-grid, .certificates-grid {
+        grid-template-columns: 1fr; /* Stack items vertically */
+    }
+
+    /* About Me */
+    .about-me-content h2 { font-size: 2.2em; }
+    
+    /* Contact Section */
+    .contact-item {
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    /* Modal */
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+    }
+}
+
+/* 3. Small Mobile Devices (under 480px) */
+@media (max-width: 480px) {
+    .hero-content h1 { font-size: 2.2em; }
+    .hero-content h2 { font-size: 1.2em; }
+    
+    .nav-links {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2x2 grid for mobile menu */
+        text-align: center;
+        gap: 10px;
+    }
+
+    .section { padding: 50px 4%; }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Chatbot adjustments for small screens */
     .chatbot-window {
-        width: 90%;
-        right: 5%;
-        bottom: 70px;
+        width: 90vw;
+        right: 5vw;
+        bottom: 85px;
     }
 }
